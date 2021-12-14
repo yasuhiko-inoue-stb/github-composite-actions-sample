@@ -1,0 +1,14 @@
+name: "setup library"
+inputs:
+  node-version:
+    default: '14.x'
+    required: false
+    description: 'version of nodejs'
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ inputs.node-version }}
+
